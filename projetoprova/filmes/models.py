@@ -23,17 +23,19 @@ CATEGORIA = [
       ('P','Promoção'),
      
 
-class filmes (models.filmes):
+class filmes (models.models):
 	nomefilme = models.CharField('Titulo Filme:',max_length=100,null=True)
 	generofilme = models.CharField('Genero do Filme:',max_length=1,choices=TIPO_FILME,null=True)
 	duracaofilme = models.IntegerField('Duracao do filme',null=True, help_text="Informar duração em minutos")
-	categoriafilme = models.CharField('Categoria do Filme:',max_length=1,choices=CATEGORIA,null=True)
-	
-	class Meta:
-		verbose_name = "Macro filme"
-		verbose_name_plural = "Macro filme"
-	
+	categoriafilmes= models.CharField('Categoria do Filme:',max_length=1,choices=CATEGORIA,null=True)
 	def __unicode__(self):
 		return self.nomefilme
+
+class Valor(models.Model):
+	Categoria = models.ForeignKey(filmes,verbose_name="Categoiafilmes",null=True)	
+	Preco = models.CharField('Preco',max_length=10,null=True)	
+	
+
+		
 
 
