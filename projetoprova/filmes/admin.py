@@ -1,19 +1,19 @@
 #coding:utf-8
 from django.contrib import admin
-from models import filmes
+from models import filme
 from modesl import valores
 
 
-class filmesAdmin(admin.ModelAdmin):
+class filmeAdmin(admin.ModelAdmin):
 	list_display = ['nomefilme','generofilme','duracaofilme']
 	list_filter = ['nomefilme','generofilme']
 	search_fields = ['nomefilme','generofilme']
 	save_as = True
 	
-class valoresAdmin(admin.ModelAdmin):
-	list_display = ['Categoria','Preco']
-	list_filter = ['Categoria','Preco']
-	search_fields = ['Categoria','Preco']
+class valoreAdmin(admin.ModelAdmin):
+	list_display = ['categoria','preco']
+	list_filter = ['categoria','preco']
+	search_fields = ['categoria','preco']
 	save_as = True
 	
 	

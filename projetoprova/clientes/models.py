@@ -7,10 +7,8 @@ SEXO_OPCOES = [
 
 	('M','Masculino'),
 	('F','Feminino')
-
-]
-
-
+	]
+	
 
 class cliente(models.Model):
 	

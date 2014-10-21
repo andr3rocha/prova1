@@ -8,8 +8,8 @@ from models import aluguel
 # model = aluguel
 
 class aluguelAdmin(admin.ModelAdmin):
-list_display = ['nome','nomefilme','datadevolucao','pagamento']
-list_filter = ['nome']
-search_fields = ['nome']
-save_as = True
+	list_display = ['nome','nomefilme','datadevolucao','pagamento']
+	list_filter = ['nome']
+	search_fields = ['nome']
+	save_as = True
 
